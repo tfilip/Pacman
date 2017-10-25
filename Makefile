@@ -13,6 +13,8 @@ OBJ2 := $(EXEC2).o
 
 build: $(EXEC1) $(EXEC2)
 
+#Generare executabile
+
 $(EXEC1): $(OBJ1)
 	$(CC) $(CFLAGS) $^ -o $@
 
@@ -20,11 +22,15 @@ $(EXEC1): $(OBJ1)
 $(EXEC2): $(OBJ2)
 	$(CC) $(CFLAGS) $^ -o $@
 
+#Generare fisiere obiect
+
 $(OBJ1): $(SRC1)
 	$(CC) $(CFLAGS) $^ -c
 
 $(OBJ2): $(SRC2)
 	$(CC) $(CFLAGS) $^ -c
+
+#Curatenie
 
 .PHONY: clean
 clean:
