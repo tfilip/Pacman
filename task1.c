@@ -15,7 +15,7 @@ void print_spaces(int n){
 
 void print_char(int n,char c){
     for(int i=0;i<n;i++){
-        printf("%c ",c);
+        (i!=n-1)?printf("%c ",c):printf("%c",c);
     }
 }
 

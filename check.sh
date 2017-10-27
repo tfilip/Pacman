@@ -43,14 +43,14 @@ function check_task() {
         ./$1 < $IN_FILE > $OUT_FILE
 
         #iwBu
-        diff -iwB $OUT_FILE $REF_FILE &> /dev/null
+        diff $OUT_FILE $REF_FILE &> /dev/null
         if [ $? -eq 0 ]; then
             TOTAL=$((TOTAL + points_per_test))
             echo -e "Test $i: ok ... $TOTAL/90"
         else
             echo -e "Test $i: failed ... $TOTAL/90"
         fi    
-
+        # exit
     done
 }
 
