@@ -6,7 +6,8 @@
     caracterul cerut */
 
 void print_spaces(int n){
-    for(int i=0;i<2*n;i++){
+    int i;
+    for(i=0;i<2*n;i++){
         printf("%s"," ");
     }
 }
@@ -14,7 +15,8 @@ void print_spaces(int n){
 
 
 void print_char(int n,char c){
-    for(int i=0;i<n;i++){
+    int i;
+    for(i=0;i<n;i++){
         (i!=n-1)?printf("%c ",c):printf("%c",c);
     }
 }
@@ -23,10 +25,10 @@ int main()
 {
     int N;
     char C;
-
+    int i;
     scanf("%d %c",&N,&C);
 
-    for(int i=N;i>0;i--){
+    for(i=N;i>0;i--){
         print_spaces(N-i);
         print_char(i,C);
         printf("\n");

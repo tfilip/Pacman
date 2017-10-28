@@ -1,6 +1,6 @@
 #Declararea variabile
 CC = gcc
-CFLAGS = -Wall
+CFLAGS = -Wall -lm
 
 EXEC1 = task1
 EXEC2 = pacman
@@ -16,11 +16,11 @@ build: $(EXEC1) $(EXEC2)
 #Generare executabile
 
 $(EXEC1): $(OBJ1)
-	$(CC) $(CFLAGS) $^ -o $@
+	$(CC)  $^ -o $@ $(CFLAGS)
 
 
 $(EXEC2): $(OBJ2)
-	$(CC) $(CFLAGS) $^ -o $@
+	$(CC)  $^ -o $@ $(CFLAGS)
 
 #Generare fisiere obiect
 
